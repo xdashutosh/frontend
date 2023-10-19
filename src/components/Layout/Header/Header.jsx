@@ -17,8 +17,8 @@ import {
 import { Link } from 'react-router-dom'
 import { RiDashboardFill, RiLogoutBoxLine} from 'react-icons/ri'
 
-const LinkBut =({url="/",title="Home"})=>(
-<Link to={url}>
+const LinkBut =({url="/",title="Home",onClose})=>(
+<Link to={url} onClick={onClose}>
     <Button variant={'ghost'} >{title}</Button>
 </Link>
 );
@@ -55,11 +55,11 @@ const user = {
 
           <DrawerBody>
           <VStack spacing={'8'} alignItems={'flex-start'}>
-            <LinkBut url={'/'} title={'Home'} />
-            <LinkBut url={'/courses'} title={'Browse All Courses'}/>
-            <LinkBut url={'/request'} title={'Request a Course'}/>
-            <LinkBut url={'/contact'} title={'Contact Us'}/>
-            <LinkBut url={'/about'} title={'About'}/>
+            <LinkBut onClose={onClose} url={'/'} title={'Home'} onClick={onClose}/>
+            <LinkBut  onClose={onClose} url={'/courses'} title={'Browse All Courses'}/>
+            <LinkBut  onClose={onClose} url={'/request'} title={'Request a Course'}/>
+            <LinkBut  onClose={onClose} url={'/contact'} title={'Contact Us'}/>
+            <LinkBut  onClose={onClose} url={'/about'} title={'About'}/>
            
           </VStack>
            
@@ -71,10 +71,10 @@ const user = {
                 <VStack>
 
                 <HStack mt={'16'} spacing={'8'}>
-                   <Link to={'/login'}>
+                   <Link to={'/login'} onClick={onClose}>
                             <Button colorScheme='green' variant={'ghost'} >Profile</Button>
                            </Link>
-                            <Link to={'/'}>
+                            <Link to={'/'} onClick={onClose}>
                             <Button  onClick={()=>setisAuthenticated(false)}><RiLogoutBoxLine/> Logout</Button>
                            </Link>
                     
@@ -82,7 +82,7 @@ const user = {
                 
                 <HStack >
 {
-    user && user.role==="admin" && <Link to={'/admin/dashboard'}>
+    user && user.role==="admin" && <Link to={'/admin/dashboard'} onClick={onClose}>
     <Button colorScheme='green'><RiDashboardFill/>dashboard</Button>
     </Link>
 }
@@ -90,11 +90,11 @@ const user = {
                 </VStack>
                            ):(
                             <HStack spacing={'4'} mt={'16'}>
-                                <Link to={'/login'}>
+                                <Link to={'/login'} onClick={onClose}>
                             <Button colorScheme='green' onClick={()=>setisAuthenticated(true)}>Login</Button>
                            </Link>
                 <text>or</text>
-                <Link to={'/signup'}>
+                <Link to={'/signup'} onClick={onClose}>
                 <Button variant={'solid'}>Signup</Button>
                 </Link>
                 </HStack>

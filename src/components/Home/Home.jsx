@@ -9,10 +9,10 @@ const Home = () => {
    <section className='home'>
 <div className='container'>
 <Stack h={'100%'} direction={['column','row']} justifyContent={'center'} alignItems={'center'} spacing={['2','8']}>
-<VStack w={'full'} spacing={'4'} alignItems={['center','flex-end']}>
-<Heading  children="LEARN FROM EXPERTS" size={'2xl'}/>
-<Text  children="Find Valuebale Content At Reasonable Price"/>
-<Button size={'lg'} colorScheme='green' >Explore Now</Button>
+<VStack w={'full'} spacing={'1'} alignItems={['center','flex-end']}>
+<Heading textAlign={['left','flex-end']}  children="LEARN FROM EXPERTS" size={'2xl'}/>
+<Text textAlign={['left','flex-end']} fontSize={'xl'} children="Find Valuebale Content At Reasonable Price"/>
+<Button size={'lg'} colorScheme='green' mt={['4','8']} >Explore Now</Button>
 </VStack>
 <Image boxSize={'md'} src={mainlogo} className='mainlogo' objectFit={'contain'} style={{
   animation: "updown 4s infinite , glow 1s infinite alternate",
