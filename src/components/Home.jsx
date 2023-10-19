@@ -50,7 +50,7 @@ const Home = () => {
 </div>
 <Box w={'full'} mt={['-16','-8']}>
 <Heading children="Our Brands" borderBottom={'2px solid'} w={'-webkit-fit-content'} ml={['8','16']} fontFamily={'body'}  color={'green.400'}/>
-<HStack w={'full'} my={['2','8']} py={['2','8']} className='brands' bg={'blackAlpha.300'} alignItems={'center'} justifyContent={'center'} spacing={['8','24']} fontSize={['2xl','3xl','5xl']} textColor={'blackAlpha.600'}><FaYoutube /><FaGoogle /><FaLinkedin /><FaTwitter /><FaWhatsapp /></HStack>
+<HStack w={'full'} my={['2','8']} py={['8','16']} className='brands' bg={'blackAlpha.300'} alignItems={'center'} justifyContent={'center'} spacing={['8','24']} fontSize={['2xl','3xl','5xl']} textColor={'blackAlpha.600'}><FaYoutube /><FaGoogle /><FaLinkedin /><FaTwitter /><FaWhatsapp /></HStack>
 </Box>
 
 <Stack w={'full'} h={'70vh'}  justifyContent={'space-between'} direction={['column','row']}>
