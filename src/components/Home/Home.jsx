@@ -1,6 +1,6 @@
 import { Box, Button, HStack, Heading, Image, Stack, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
-import mainlogo from '../assets/images/homelogo.png'
+import mainlogo from '../../assets/images/homelogo.png'
 
 import {FaYoutube,FaGoogle,FaTwitter,FaWhatsapp,FaLinkedin, FaArrowAltCircleRight, FaArrowAltCircleDown} from 'react-icons/fa';
 import './Home.css';
@@ -50,17 +50,17 @@ const Home = () => {
 </div>
 <Box w={'full'} mt={['-16','-8']}>
 <Heading children="Our Brands" borderBottom={'2px solid'} w={'-webkit-fit-content'} ml={['8','16']} fontFamily={'body'}  color={'green.400'}/>
-<HStack w={'full'} my={['2','8']} py={['8','16']} className='brands' bg={'blackAlpha.300'} alignItems={'center'} justifyContent={'center'} spacing={['8','24']} fontSize={['2xl','3xl','5xl']} textColor={'blackAlpha.600'}><FaYoutube /><FaGoogle /><FaLinkedin /><FaTwitter /><FaWhatsapp /></HStack>
+<HStack w={'full'} my={['2','8']} py={['8','16']} className='brands' bg={'blackAlpha.300'} alignItems={'center'} justifyContent={'center'} spacing={['8','24']} fontSize={['2xl','3xl','5xl']} ><FaYoutube color=''/><FaGoogle /><FaLinkedin /><FaTwitter /><FaWhatsapp /></HStack>
 </Box>
 
 <Stack w={'full'} h={'70vh'}  justifyContent={'space-between'} direction={['column','row']}>
 <VStack h={'full'} w={['100%','70%']} justifyContent={'center'} alignItems={'center'}>
 <Heading fontSize={['3xl','4xl','5xl']} color={'green.400'}> Want to Know us?</Heading>
- <FaArrowAltCircleRight color='black'  className='rightarrow' size={'72'}  style={{
+ <FaArrowAltCircleRight   className='rightarrow' size={'72'}  style={{
   animation: "moveRightToLeft 2s infinite alternate",
 
 }}/>
-<FaArrowAltCircleDown color='black'  className='downarrow' size={'72'}  style={{
+<FaArrowAltCircleDown   className='downarrow' size={'72'}  style={{
   animation: "updown 2s infinite ",
 
 }}/>
