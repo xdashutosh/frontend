@@ -25,7 +25,7 @@ reader.onload = () =>{
     <VStack h={'full'} justifyContent={'center'} alignItems={'center'}  spacing={'16'}>
     <Heading children={"Register to LearnVita!"} textTransform={'uppercase'} mt={'-28'} textAlign={'center'}/>
 
-    <form style={{width:"100%"}}>
+    <form style={{width:"100%"}} method='post' action='/login'>
 
 <Box my={'4'} w={'full'} display={'flex'} justifyContent={'center'} >
 <Avatar size={'2xl'} src={profileimg}/>

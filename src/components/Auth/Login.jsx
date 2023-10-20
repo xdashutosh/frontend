@@ -13,7 +13,7 @@ const Login = () => {
     <VStack h={'full'} justifyContent={'center'} alignItems={'center'}  spacing={'16'}>
     <Heading children={"Welcome Back!"} mt={'-28'} textAlign={'center'}/>
 
-    <form style={{width:"100%"}}>
+    <form style={{width:"100%"}} method='get' action='/'>
         <Box my={'4'}>
 <FormLabel htmlFor='email' children={"Email Address"}/>
 <Input 
