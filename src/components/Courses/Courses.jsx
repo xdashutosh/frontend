@@ -13,13 +13,17 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
 import {BiAddToQueue, BiUserCircle} from 'react-icons/bi'
 import {FaEye} from 'react-icons/fa'
 
 const Courses = () => {
   const [keyword, setkeyword] = useState('');
   const [coursecat, setcoursecat] = useState('');
+
+  const addtoplaylisthandler = ()=>{
+    console.log('addded to playlist');
+  }  
+
 
   const Course = ({
     views,
@@ -61,7 +65,7 @@ const Courses = () => {
 <Link to={`/course/${id}`}>
   <Button colorScheme='green'>Watch Now</Button>
 </Link>
-  <Button variant={'ghost'}><HStack justifyContent={'center'} alignItems={'center'}><BiAddToQueue size={'16'}/><Text>ADD</Text></HStack></Button>
+  <Button variant={'ghost'} onClick={()=>addtoplaylisthandler(id)}><HStack justifyContent={'center'} alignItems={'center'} ><BiAddToQueue size={'16'}/><Text>ADD</Text></HStack></Button>
 </HStack>
   </VStack>
     );
@@ -141,7 +145,7 @@ const Courses = () => {
         lecture={45}
         description={"In this code, we've defined a styled component called ScrollableContainer that includes the styles for the scrollbar. You can use this component in your React application to create a scrollable container with a customized scrollbar. Make sure to adjust the styles to match your design preferences"}
         creator={"Ashu chaudhary"}
-        addtoplaylisthandler={'Subscribe'}
+        addtoplaylisthandler={addtoplaylisthandler}
 
         />
         

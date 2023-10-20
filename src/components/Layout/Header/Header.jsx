@@ -29,7 +29,7 @@ const Header = () => {
     const btnRef = React.useRef()
 
 
-const [isAuthenticated ,setisAuthenticated] = useState(false);
+const isAuthenticated =false;
 const user = {
     role:"admin"
 };
@@ -62,7 +62,7 @@ const user = {
             <LinkBut  onClose={onClose} url={'/about'} title={'About'}/>
            
           </VStack>
-           
+           <Link to={'/getin'}>Login</Link>
            
           </DrawerBody>
 
@@ -71,11 +71,11 @@ const user = {
                 <VStack>
 
                 <HStack mt={'16'} spacing={'8'}>
-                   <Link to={'/login'} onClick={onClose}>
+                   <Link to={'/profile'} onClick={onClose}>
                             <Button colorScheme='green' variant={'ghost'} >Profile</Button>
                            </Link>
                             <Link to={'/'} onClick={onClose}>
-                            <Button  onClick={()=>setisAuthenticated(false)}><RiLogoutBoxLine/> Logout</Button>
+                            <Button><RiLogoutBoxLine/> Logout</Button>
                            </Link>
                     
                 </HStack>
@@ -90,8 +90,8 @@ const user = {
                 </VStack>
                            ):(
                             <HStack spacing={'4'} mt={'16'}>
-                                <Link to={'/login'} onClick={onClose}>
-                            <Button colorScheme='green' onClick={()=>setisAuthenticated(true)}>Login</Button>
+                                <Link to={'/'} onClick={onClose}>
+                            <Button colorScheme='green'>Login</Button>
                            </Link>
                 <text>or</text>
                 <Link to={'/signup'} onClick={onClose}>
