@@ -44,3 +44,25 @@ color: green;
 .course:hover{
   transform: translateY(-10px);
 }
+.signup{
+  color: green;
+  margin-right: 5px;
+}
+.choose-file-container input[type="file"] {
+  display: none; /* Hide the default file input */
+}
+
+/* Style the custom button */
+.custom-choose-file-button {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.avatarchoose{
+  display: none;
+}

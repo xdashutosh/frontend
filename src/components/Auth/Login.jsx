@@ -11,7 +11,7 @@ const Login = () => {
   return (
    <Container h={"95vh"}>
     <VStack h={'full'} justifyContent={'center'} alignItems={'center'}  spacing={'16'}>
-    <Heading children={"Welcome to LearnVita"} mt={'-28'} textAlign={'center'}/>
+    <Heading children={"Welcome Back!"} mt={'-28'} textAlign={'center'}/>
 
     <form style={{width:"100%"}}>
         <Box my={'4'}>
@@ -23,7 +23,7 @@ value={email}
 onChange={(e)=>setemail(e.target.value)}
 placeholder='abc@gmail.com'
 type='email'
-focusBorderColor='yellow'
+focusBorderColor='green.300'
 />
 </Box>
 <Box my={'4'}>
@@ -36,7 +36,7 @@ value={password}
 onChange={(e)=>setpassword(e.target.value)}
 placeholder='ex Abc@123'
 type={hidepass}
-focusBorderColor='yellow'
+focusBorderColor='green.300'
 />
 {
     hidepass==="password"?<FaEye onClick={()=>{return(sethidepass('text') )}}/>:<FaEyeSlash onClick={()=>{sethidepass('password')}}/>
@@ -48,6 +48,11 @@ focusBorderColor='yellow'
 </Box>
 
 <Button colorScheme='green' my={'4'}  type='submit'>Login</Button>
+<HStack mt={'4'}>
+    <Text>New User?</Text>
+    <Link to={'/register'}><Button fontSize={'sm'} variant={'link'} colorScheme='blue'> <b className='signup'>Sign Up</b>here</Button></Link>
+    
+</HStack>
     </form>
 </VStack>
    </Container>

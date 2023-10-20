@@ -62,7 +62,6 @@ const user = {
             <LinkBut  onClose={onClose} url={'/about'} title={'About'}/>
            
           </VStack>
-           <Link to={'/getin'}>Login</Link>
            
           </DrawerBody>
 
@@ -90,11 +89,11 @@ const user = {
                 </VStack>
                            ):(
                             <HStack spacing={'4'} mt={'16'}>
-                                <Link to={'/'} onClick={onClose}>
+                                <Link to={'/login'} onClick={onClose}>
                             <Button colorScheme='green'>Login</Button>
                            </Link>
                 <text>or</text>
-                <Link to={'/signup'} onClick={onClose}>
+                <Link to={'/register'} onClick={onClose}>
                 <Button variant={'solid'}>Signup</Button>
                 </Link>
                 </HStack>
