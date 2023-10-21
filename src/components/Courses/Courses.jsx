@@ -1,21 +1,19 @@
 import {
   Button,
-  ButtonGroup,
   Container,
-  Divider,
   HStack,
   Heading,
   Image,
   Input,
-  Link,
   Stack,
   Text,
   VStack,
 } from '@chakra-ui/react';
+import { Link
+ } from 'react-router-dom';
 import React, { useState } from 'react';
 import {BiAddToQueue, BiUserCircle} from 'react-icons/bi'
 import {FaEye} from 'react-icons/fa'
-
 const Courses = () => {
   const [keyword, setkeyword] = useState('');
   const [coursecat, setcoursecat] = useState('');
@@ -121,14 +119,16 @@ const Courses = () => {
         spacing={['2', '4']}
       >
         {CourseCategories.map((course, index) => (
+    
           <Button
             minW={'-webkit-fit-content'}
             fontSize={['sm', 'lg']}
             key={index}
             onClick={() => setcoursecat(course)}
-          >
+            >
             {course}
           </Button>
+            
         ))}
       </HStack>
 
