@@ -57,8 +57,8 @@ const user = {
           <VStack spacing={'8'} alignItems={'flex-start'}>
             <LinkBut onClose={onClose} url={'/'} title={'Home'} onClick={onClose}/>
             <LinkBut  onClose={onClose} url={'/courses'} title={'Browse All Courses'}/>
-            <LinkBut  onClose={onClose} url={'/request'} title={'Request a Course'}/>
-            <LinkBut  onClose={onClose} url={'/contact'} title={'Contact Us'}/>
+            <LinkBut  onClose={onClose} url={'/reqcourse'} title={'Request a Course'}/>
+            <LinkBut  onClose={onClose} url={'/contactus'} title={'Contact Us'}/>
             <LinkBut  onClose={onClose} url={'/about'} title={'About'}/>
            
           </VStack>

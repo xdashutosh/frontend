@@ -8,6 +8,8 @@ import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import Forgotpass from './components/Auth/Forgotpass';
 import Resetpass from './components/Auth/Resetpass';
+import Contact from './components/Contactus/Contact';
+import Reqcourse from './components/RequestCourse/Reqcourse';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Route path="/register" element={<Layout><Register /></Layout>} />
         <Route path="/forgetpassword" element={<Forgotpass/>} />
         <Route path="/resetpass/:token" element={<Resetpass/>} />
+        <Route path="/contactus" element={<Contact/>} />
+        <Route path="/reqcourse" element={<Reqcourse/>} />
+
       </Routes>
     </Router>
   );
