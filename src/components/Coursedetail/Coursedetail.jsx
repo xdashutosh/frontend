@@ -3,10 +3,8 @@ import React, { useState } from 'react'
 
 const Coursedetail = () => {
     const description ="Lecture Description is here ..";
-    const [url,seturl] = useState('');
     const [lecturenumber,setlecturenumber] = useState(0);
-    const [title,settitle] = useState('');
-    const [description,setdescription] = useState('');
+
 
 
 
@@ -24,7 +22,7 @@ const Coursedetail = () => {
             title:"sample2",
             description:"sample description is gonna be here",
             video:{
-                url:"https://www.w3schools.com/tags/movie.mp4"
+                url:"https://www.javatpoint.com/oprweb/movie.mp4"
             }
         },
         {
@@ -32,7 +30,7 @@ const Coursedetail = () => {
             title:"sample3",
             description:"sample description is gonna be here",
             video:{
-                url:"https://www.w3schools.com/tags/movie.mp4"
+                url:"https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
             }
         },
         {
@@ -43,7 +41,9 @@ const Coursedetail = () => {
                 url:"https://www.w3schools.com/tags/movie.mp4"
             }
         }
-    ]
+    ];
+
+
   return (
    <Grid minH={'90vh'} templateColumns={['1fr','3fr 1fr']}>
 
@@ -64,7 +64,7 @@ src={Lectures[lecturenumber].video.url}
 </Box>
 <VStack overflowY={'auto'} mx={'4'}>
     {Lectures.map((eachcourse,index)=>(
-        <Button w={'full'} key={eachcourse._id} borderBottomWidth={'2px'} >
+        <Button w={'full'} key={eachcourse._id} borderBottomWidth={'2px'} onClick={()=>setlecturenumber(index)}>
         <Text noOfLines={1}>
             #{index+1}{eachcourse.title}
         </Text>
