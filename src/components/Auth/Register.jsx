@@ -71,7 +71,7 @@ type={hidepass}
 focusBorderColor='green.300'
 />
 {
-    hidepass==="password"?<FaEye onClick={()=>{return(sethidepass('text') )}}/>:<FaEyeSlash onClick={()=>{sethidepass('password')}}/>
+    hidepass==="password"?<FaEyeSlash onClick={()=>{return(sethidepass('text') )}}/>:<FaEye onClick={()=>{sethidepass('password')}}/>
 }
 </HStack>
 </Box>

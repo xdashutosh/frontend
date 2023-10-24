@@ -16,7 +16,8 @@ import Subscribe from './components/Payments/Subscribe';
 import Notfound from './components/Layout/Notfound/Notfound';
 import Coursedetail from './components/Coursedetail/Coursedetail';
 import Profile from './components/Profile/Profile';
-
+import Changepassword from './components/Profile/Changepassword';
+import Updateprofile from './components/Profile/Updateprofile';
 function App() {
   return (
     <Router>
@@ -35,6 +36,8 @@ function App() {
         <Route path="/paymentfail" element={<Layout><Paymentfail /></Layout>} />
         <Route path="/paymentsuccess" element={<Paymentsucess /> }/>
         <Route path="/subscribe" element={<Subscribe/>} />
+        <Route path="/changepassword" element={<Changepassword/>} />
+        <Route path="/updateprofile" element={<Updateprofile/>} />
         <Route path="*" element={<Notfound/>} />
 
       </Routes>
