@@ -29,7 +29,7 @@ const Header = () => {
     const btnRef = React.useRef()
 
 
-const isAuthenticated =false;
+const isAuthenticated =true;
 const user = {
     role:"admin"
 };

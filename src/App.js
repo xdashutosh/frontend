@@ -15,6 +15,7 @@ import Paymentsucess from './components/Payments/Paymentsucess';
 import Subscribe from './components/Payments/Subscribe';
 import Notfound from './components/Layout/Notfound/Notfound';
 import Coursedetail from './components/Coursedetail/Coursedetail';
+import Profile from './components/Profile/Profile';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/courses" element={<Layout><Courses /></Layout>} />
         <Route path="/course/:id" element={<Layout><Coursedetail /></Layout>} />
         <Route path="/login" element={<Layout><Login /></Layout>} />
+        <Route path="/profile" element={<Layout><Profile /></Layout>} />
         <Route path="/register" element={<Layout><Register /></Layout>} />
         <Route path="/forgetpassword" element={<Forgotpass/>} />
         <Route path="/resetpass/:token" element={<Resetpass/>} />

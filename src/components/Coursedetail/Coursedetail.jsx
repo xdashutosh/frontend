@@ -45,8 +45,7 @@ const Coursedetail = () => {
 
 
   return (
-   <Grid minH={'90vh'} templateColumns={['1fr','3fr 1fr']}>
-
+   <Grid minH={'90vh'} templateColumns={['1fr','3fr 1fr']} mt={'-20'}>
 <Box>
 <video
 width={'100%'}
