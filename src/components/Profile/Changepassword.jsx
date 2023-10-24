@@ -18,7 +18,7 @@ const Changepassword = () => {
 <HStack spacing={'1'}>
 <Input 
 required
-id='password'
+id='oldpassword'
 value={oldpassword}
 onChange={(e)=>setoldpassword(e.target.value)}
 placeholder='ex Abc@123'
@@ -33,7 +33,7 @@ focusBorderColor='green.300'
 
 <Input 
 required
-id='password'
+id='newpassword'
 value={newpassword}
 onChange={(e)=>setnewpassword(e.target.value)}
 placeholder='ex Abc@123'
