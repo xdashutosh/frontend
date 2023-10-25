@@ -6,7 +6,7 @@ import React from 'react'
 const Sidebar = () => {
 const Location  =  useLocation();
   return (
-  <VStack   spacing={'8'} p={'4'} boxShadow={'md'} maxH={'100vh'} >
+  <VStack spacing={'8'} p={'4'} boxShadow={'md'} maxH={'120vh'} >
   <SidebarNavbtns url={'dashboard'} Icon={RiDashboardFill} text={'DashBoard'} active={Location.pathname==="/admin/dashboard"}/>
   <SidebarNavbtns url={'createcourse'} Icon={RiAddCircleFill} text={'Create Course'} active={Location.pathname==="/admin/createcourse"}/>
   <SidebarNavbtns url={'courses'} Icon={RiEyeFill} text={'Courses'} active={Location.pathname==="/admin/courses"}/>

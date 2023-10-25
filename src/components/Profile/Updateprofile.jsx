@@ -1,6 +1,6 @@
 import { Box, Button, Container, FormLabel, HStack, Heading, Input } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import {FaEye,FaEyeSlash} from 'react-icons/fa'
+
 const Updateprofile = () => {
     const [newusername,setnewusername] = useState('');
     const [newemail,setnewemail] = useState('');
@@ -14,7 +14,7 @@ const Updateprofile = () => {
     <HStack spacing={'1'}>
     <Input 
  
-    id='oldpassword'
+    id='newusername'
     value={newusername}
     onChange={(e)=>setnewusername(e.target.value)}
     placeholder='New username'

@@ -67,7 +67,7 @@ const Dashboard = () => {
       css={{
         cursor: `url(${cursor}),default`,
       }}
-      minH={'80vh'}
+      minH={'100vh'}
       templateColumns={['1fr', '5fr 1fr']}
     >
       <Box boxSizing="border-box" px={['4', '0']}>

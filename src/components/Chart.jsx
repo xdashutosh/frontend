@@ -7,7 +7,7 @@ ChartJS.register(
 )
 export const LineChart = () => {
 
-    const labels =["abhi","ashu","arjit"];
+    const labels =getLastyearlebels();
     const options ={
         responsive:true,
         plugins:{
@@ -69,12 +69,9 @@ function getLastyearlebels(){
     ];
 
     const currentmonth = new Date().getMonth();
-    const remain = 11-currentmonth;
-    console.log(remain);
-    for (let index = 0; index < remain; index++) {
-        labels.push(months[index]);
+    for (let index = currentmonth; index >= 0; index--) {
+        labels.unshift(months[index]);
         
     }
-    console.log(labels);
+   return labels;
 }
-getLastyearlebels();
