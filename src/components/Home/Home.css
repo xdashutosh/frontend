@@ -66,3 +66,12 @@ color: green;
 .avatarchoose{
   display: none;
 }
+@media (max-width: 600px) {
+  .column1 {
+    order: 2;
+  }
+
+  .column2 {
+    order: 1;
+  }
+}
