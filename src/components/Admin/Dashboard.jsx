@@ -70,6 +70,8 @@ const Dashboard = () => {
       minH={'100vh'}
       templateColumns={['1fr', '5fr 1fr']}
     >
+  
+
       <Box boxSizing="border-box" px={['4', '0']}>
         <Text textAlign={'center'} opacity={'.5'}>
           Last update on {new Date().toISOString().split('T')[0]}
@@ -115,7 +117,7 @@ const Dashboard = () => {
       
 
         <Grid templateColumns={['1fr', '2fr 1fr']}>
-          <Box p={'4'}>
+          <Box p={'4'}  >
             <Heading
               textAlign={['center', 'left']}
               size={'md'}
@@ -150,7 +152,9 @@ const Dashboard = () => {
         </Grid>
             
       </Box>
+      
       <Sidebar />
+      
     </Grid>
   );
 };
